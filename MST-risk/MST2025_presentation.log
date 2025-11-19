@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.10)  19 NOV 2025 13:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.10)  19 NOV 2025 13:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**MST-risk/MST2025_presentation.tex
-(./MST-risk/MST2025_presentation.tex
+**MST2025_presentation.tex
+(./MST2025_presentation.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
 (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamer.cls
@@ -685,7 +685,7 @@ y
 \beamer@dimb=\dimen291
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemedefault.st
-y))) (MST-risk/beamerthemejourneys_econark.sty
+y))) (./beamerthemejourneys_econark.sty
 Package: beamerthemejourneys_econark 2025/07/08 Journeys x Econ-ARK Beamer Them
 e v11.0
 
@@ -1098,7 +1098,7 @@ Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
 \@quotelevel=\count480
 \@quotereset=\count481
 
-(MST-risk/MST2025_presentation.aux)
+(./MST2025_presentation.aux)
 \openout1 = `MST2025_presentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -1193,7 +1193,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 67.
 LaTeX Info: Redefining \pageref on input line 67.
 LaTeX Info: Redefining \nameref on input line 67.
- (MST-risk/MST2025_presentation.out) (MST-risk/MST2025_presentation.out)
+ (./MST2025_presentation.out) (./MST2025_presentation.out)
 \@outlinefile=\write6
 \openout6 = `MST2025_presentation.out'.
 
@@ -1302,11 +1302,10 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'MST2025_presentation.bbl' found.
 
-(MST-risk/MST2025_presentation.bbl)
+(./MST2025_presentation.bbl)
 Package biblatex Info: Reference section=0 on input line 67.
 Package biblatex Info: Reference segment=0 on input line 67.
- (MST-risk/MST2025_presentation.nav)
-[1
+ (./MST2025_presentation.nav) [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Overfull \hbox (56.90549pt too wide) in paragraph at lines 99--99
@@ -1315,7 +1314,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 99--99
 
 [2
 
-] (MST-risk/MST2025_presentation.toc)
+] (./MST2025_presentation.toc)
 Overfull \hbox (56.90549pt too wide) in paragraph at lines 106--106
 [][] 
  []
@@ -1355,7 +1354,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 153--153
 [5
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 179--179
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 178--178
 [][] 
  []
 
@@ -1363,25 +1362,25 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 179--179
 
 ]
 LaTeX Font Info:    Font shape `T1/qhv/bx/it' in size <10> not available
-(Font)              Font shape `T1/qhv/b/it' tried instead on input line 205.
+(Font)              Font shape `T1/qhv/b/it' tried instead on input line 204.
 LaTeX Font Info:    Font shape `T1/qhv/bx/it' in size <7> not available
-(Font)              Font shape `T1/qhv/b/it' tried instead on input line 205.
+(Font)              Font shape `T1/qhv/b/it' tried instead on input line 204.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 205--205
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 204--204
 [][] 
  []
 
 [7
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 231--231
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 230--230
 [][] 
  []
 
 [8
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 248--248
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 247--247
 [][] 
  []
 
@@ -1389,77 +1388,77 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 248--248
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+qhv on input line 2
-75.
+74.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/tex-gyre/ts1qhv.fd
 File: ts1qhv.fd 2009/09/25 v1.2 font definition file for TS1/qhv
 )
 LaTeX Font Info:    Font shape `T1/qhv/bx/it' in size <8> not available
-(Font)              Font shape `T1/qhv/b/it' tried instead on input line 275.
+(Font)              Font shape `T1/qhv/b/it' tried instead on input line 274.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 275--275
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 274--274
 [][] 
  []
 
 [10
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 300--300
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 299--299
 [][] 
  []
 
 [11
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 318--318
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 317--317
 [][] 
  []
 
 [12
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 339--339
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 338--338
 [][] 
  []
 
 [13
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 357--357
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 355--355
 [][] 
  []
 
 [14
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 373--373
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 371--371
 [][] 
  []
 
 [15
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 386--386
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 384--384
 [][] 
  []
 
 [16
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 401--401
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 399--399
 [][] 
  []
 
 [17
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 413--413
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 411--411
 [][] 
  []
 
 [18
 
 ]
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 433--433
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 431--431
 [][] 
  []
 
@@ -1469,16 +1468,16 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 433--433
 <kath-kel-quiz-2.png, id=166, 401.5pt x 410.53375pt>
 File: kath-kel-quiz-2.png Graphic file (type png)
 <use kath-kel-quiz-2.png>
-Package pdftex.def Info: kath-kel-quiz-2.png  used on input line 444.
+Package pdftex.def Info: kath-kel-quiz-2.png  used on input line 442.
 (pdftex.def)             Requested size: 169.01036pt x 172.81764pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 444--444
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 442--442
 [][] 
  []
 
 [20
 
- <MST-risk/kath-kel-quiz-2.png>]
+ <./kath-kel-quiz-2.png>]
 \tf@nav=\write7
 \openout7 = `MST2025_presentation.nav'.
 
@@ -1488,7 +1487,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 444--444
 \tf@snm=\write9
 \openout9 = `MST2025_presentation.snm'.
 
- (MST-risk/MST2025_presentation.aux)
+ (./MST2025_presentation.aux)
 Package rerunfilecheck Info: File `MST2025_presentation.out' has not changed.
 (rerunfilecheck)             Checksum: BF26151CC43EB072A17BB8056E56076E;300.
 Package logreq Info: Writing requests to 'MST2025_presentation.run.xml'.
@@ -1496,13 +1495,13 @@ Package logreq Info: Writing requests to 'MST2025_presentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34189 strings out of 478268
- 675219 string characters out of 5846347
+ 34188 strings out of 478268
+ 675046 string characters out of 5846347
  1337378 words of memory out of 5000000
  51738 multiletter control sequences out of 15000+600000
  561815 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,122p,762b,829s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,122p,753b,829s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/
 local/texlive/2022/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/local/tex
 live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
@@ -1526,7 +1525,7 @@ s/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/
 fonts/type1/public/tex-gyre/qhvb.pfb></usr/local/texlive/2022/texmf-dist/fonts/
 type1/public/tex-gyre/qhvr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
 public/tex-gyre/qhvri.pfb>
-Output written on MST-risk/MST2025_presentation.pdf (20 pages, 583427 bytes).
+Output written on MST2025_presentation.pdf (20 pages, 585460 bytes).
 PDF statistics:
  280 PDF objects out of 1000 (max. 8388607)
  204 compressed objects within 3 object streams
