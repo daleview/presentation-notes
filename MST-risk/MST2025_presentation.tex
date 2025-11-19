@@ -1,0 +1,450 @@
+\documentclass[10pt]{beamer}
+\usetheme{journeys_econark}
+
+% Math packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{bm}  % For bold math symbols
+
+% Graphics and colors
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{bbm}
+
+% Bibliography
+\usepackage[style=authoryear,backend=biber]{biblatex}
+
+%----- CUSTOM MACROS -----------------------------------------------
+% Expectations and spaces
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathcal{Z}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\C}{\mathcal{C}}
+
+% Probability notation
+\newcommand{\Prob}{\mathbb{P}}
+\renewcommand{\P}{\mathbb{P}}
+
+% Operators
+\newcommand{\T}{\mathbf{T}}
+
+% Functions (in Roman font following Stachurski style)
+\newcommand{\ubar}{\underline{u}}
+\newcommand{\cstar}{c^*}
+\newcommand{\wbar}{\bar{w}}
+
+% MPC and saving
+\newcommand{\MPC}{\text{MPC}}
+\newcommand{\AMPC}{\overline{\text{MPC}}}
+
+% Risk aversion
+\newcommand{\RA}{\gamma}
+
+%----- THEOREM ENVIRONMENTS ----------------------------------------
+% No automatic numbering - we'll use manual numbers from the paper
+\let\theorem\relax
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{assumption}{Assumption}
+\newtheorem*{claim}{Claim}
+\newtheorem*{proposition}{Proposition}
+\let\definition\relax
+\newtheorem*{definition}{Definition}
+\newtheorem*{remark}{Remark}
+
+%----- METADATA ----------------------------------------------------
+\title{A Theory of Saving under Risk Preference Dynamics}
+\subtitle{Ma, Song \& Toda (2024) - Reading Group Presentation}
+\author{Presented by: Akshay Shanker}
+\institute{University of New South Wales}
+\date{MST Conference 2025}
+
+%=====================================================================
+\begin{document}
+
+%----- TITLE SLIDE ---------------------------------------------------
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%----- PAPER OVERVIEW ------------------------------------------------
+\begin{frame}
+  \frametitle{Paper Overview}
+
+  \structure{Authors:} Qingyin Ma, Xinxi Song, Alexis Akira Toda (2024)
+
+  \vspace{0.5em}
+
+  \structure{Central Question:}
+  \begin{itemize}
+    \item Why do wealthy households save so much?
+    \item How to generate realistic wealth distributions in macro models?
+  \end{itemize}
+
+  \vspace{0.5em}
+
+  \structure{Key Innovation:} Time-varying risk aversion
+
+  \vspace{0.5em}
+
+  \structure{Main Finding:}
+  \begin{itemize}
+    \item Zero asymptotic MPCs arise naturally
+    \item No need for complex return processes
+  \end{itemize}
+\end{frame}
+
+%----- OUTLINE -------------------------------------------------------
+\begin{frame}
+  \frametitle{Outline}
+
+  \tableofcontents
+\end{frame}
+
+%=====================================================================
+\section{Motivation}
+
+%----- EMPIRICAL PUZZLE ----------------------------------------------
+\begin{frame}
+  \frametitle{The Empirical Puzzle}
+
+  \structure{Stylized Facts}
+  \begin{itemize}
+    \item Wealthy households have \alert{substantially higher saving rates}
+    \item Top 1\% exhibit \alert{markedly lower MPC} than median households
+    \item This pattern persists across countries and time periods
+  \end{itemize}
+
+  \vspace{1em}
+
+  \structure{Theoretical Challenge}
+
+  Existing models require \alert{restrictive assumptions} to yield zero asymptotic MPCs:
+  \begin{itemize}
+    \item Ma \& Toda (2021): Need stringent conditions on return risk
+    \item Benhabib et al. (2015): Require specific capital income risk structure
+    \item Carroll and Shanker (2025): $(\frac{R}{\beta})^{1/\gamma} \geq R$
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Relevance of studying asymptotic MPCs}
+
+  Overall, we seem to have a poor understanding of why the rich are thrifty. 
+  %
+  \vspace{1em}
+
+  \structure{Why it matters:}
+  \begin{itemize}
+    \item Need a theory of consumption that explains behaviour across agent types.
+    \item Matters for policy design with heterogeneous agents and generating IRFs.
+  \end{itemize}
+
+\structure{Why it (may) not matter:}
+\begin{itemize}
+  \item Is the question about \alert{MPCs}, \alert{tails}, \alert{risk perceptions} or \alert{frictions}?
+  \item We do not really know, but saying asymptotic MPCs cannot be zero in a standard model \alert{may} not be enough motivation to reject it.
+\end{itemize}
+\end{frame}
+
+
+%----- KEY INNOVATION ------------------------------------------------
+\begin{frame}
+  \frametitle{Paper's Key Contribution}
+
+  Incorporate stochastic risk aversion in an otherwise vanilla \alert{income fluctuation} 
+  \alert{problem}. 
+  %
+  \vspace{0.5em}
+
+  \structure{Key Features:}
+  \begin{itemize}
+    \item Risk preferences vary across states and over time
+    \item Captures empirical evidence of preference heterogeneity
+    \item No need for complex return processes/ edge case conditions on returns and discounting
+  \end{itemize}
+
+  \vspace{0.5em}
+
+  \begin{alertblock}{Main Result}
+    Zero asymptotic MPCs arise when agents can become less risk averse in the future.
+  \end{alertblock}
+
+
+\end{frame}
+
+%=====================================================================
+\section{Model Setup}
+
+%----- OPTIMAL SAVINGS PROBLEM --------------------------------------
+\begin{frame}
+  \frametitle{The Optimal Savings Problem}
+
+  \structure{Agent's Dynamic Problem}
+  \begin{align*}
+    \max_{\{c_t, w_t\}} \quad & \E_0 \left[ \sum_{t=0}^{\infty} \left(\prod_{i=0}^{t} \beta_i\right) u(c_t, Z_t) \right] \\[0.3em]
+    \text{s.t.} \quad & w_{t+1} = R_{t+1}(w_t - c_t) + Y_{t+1} \\
+    & 0 \leq c_t \leq w_t
+  \end{align*}
+
+  \structure{Key State Variables:}
+  \begin{itemize}
+    \item $Z_t$: Markov chain with \alert{preference shocks}
+    \item $\beta_t$: Stochastic discount factor
+    \item $R_t$: Stochastic returns
+    \item $Y_t$: Non-financial income
+  \end{itemize}
+
+  \vspace{0.3em}
+  \structure{Novel feature:} $Z_t$ affects risk aversion $\gamma(Z_t)$ directly.
+\end{frame}
+
+%----- PREFERENCE SPECIFICATION -------------------------------------
+\begin{frame}
+  \frametitle{State-dependent risk aversion}
+
+  \structure{Utility specification}
+  \begin{equation*}
+    u(c, z) = \begin{cases}
+      \frac{c^{1-\gamma(z)}}{1-\gamma(z)} & \text{if } \gamma(z) > 0, \gamma(z) \neq 1 \\
+      \log c & \text{if } \gamma(z) = 1
+    \end{cases}
+  \end{equation*}
+
+  \vspace{3em}
+
+  Key feature: \alert{$\gamma(z)$ varies with state $z$}.
+
+  \vspace{1em}
+
+  \begin{itemize}
+    \item State decomposition: $Z_t = (\bar{Z}_t, \tilde{Z}_t)$
+    \item Risk aversion driven by $\bar{Z}_t \in \{\bar{z}_1, \ldots, \bar{z}_N\}$.
+    \item Ordering: $0 < \gamma(\bar{z}_1) < \cdots < \gamma(\bar{z}_N)$.
+    \item Transition matrix: $\bar{P} = (\bar{p}_{ij})_{1 \leq i,j \leq N}$.
+  \end{itemize}
+\end{frame}
+
+%----- EULER EQUATION ------------------------------------------------
+\begin{frame}
+  \frametitle{Optimality Conditions}
+
+  \structure{Euler Equation}
+
+  The optimal consumption function $c^*(w,z)$ satisfies:
+
+  \begin{equation*}
+    u'(c^*(w,z), z) = \max\left\{ \E_z[\hat{\beta}\hat{R}u'(c^*(\hat{w}, \hat{Z}), \hat{Z})], u'(w,z) \right\}
+  \end{equation*}
+  where $\hat{w} = \hat{R}(w - c^*(w,z)) + \hat{Y}$
+
+  \vspace{1em}
+
+\end{frame}
+
+%----- KEY ASSUMPTION ------------------------------------------------
+\begin{frame}
+  \frametitle{Key Assumption for Main Results}
+
+  \begin{assumption}[2.2: Returns and Discounting]
+    \begin{enumerate}
+      \item For all $z \in Z$:
+      \begin{itemize}
+        \item $\E_z[u_c(\hat{Y}, \hat{Z})] < \infty$
+        \item $\E_z[\hat{\beta}\hat{R} \cdot u_c(\hat{Y}, \hat{Z})] < \infty$
+      \end{itemize}
+
+      \item \structure{Spectral radius condition:} $r(K(1)) < 1$
+
+      where the matrix $K(\theta)$ is defined by:
+      \begin{equation*}
+        K_{zz'}(\theta) = P(z,z') \int \beta(z,z',\varepsilon) R(z,z',\varepsilon)^{\theta} \pi(d\varepsilon)
+      \end{equation*}
+    \end{enumerate}
+  \end{assumption}
+
+  \begin{alertblock}{Interpretation}
+    $r(K(1)) < 1$ ensures wealth doesn't explode in present value terms\\
+    Generalizes the standard condition $\beta R < 1$
+  \end{alertblock}
+\end{frame}
+
+%=====================================================================
+\section{Main Results}
+
+%----- THEOREM 2.1: EXISTENCE ----------------------------------------
+\begin{frame}
+  \frametitle{Existence and Uniqueness}
+
+  \begin{theorem}[2.1: Existence and Uniqueness]
+
+    If Assumptions 2.1 and 2.2 hold, then:
+    \begin{enumerate}
+      \item The time iteration operator $T:\mathcal{C}\to\mathcal{C}$ has a unique fixed point $c^*$.
+      \item For any $c \in \mathcal{C}$:
+      \begin{equation*}
+        \rho(T^k c, c^*) \to 0 \quad \text{as } k\to\infty
+      \end{equation*}
+      where $\rho$ is a metric based on marginal utilities.
+    \end{enumerate}
+  \end{theorem}
+
+  \vspace{0.5em}
+
+  %% state MUC metric here 
+\end{frame}
+
+%----- THEOREM 3.2: ZERO MPC ----------------------------------------
+\begin{frame}
+  \frametitle{Zero Asymptotic MPCs}
+
+  \begin{theorem}[3.2: Positive Transition Matrix]
+    If every entry of $\bar{P}$ is strictly positive and $\Pr_{z,z'}(\hat{\beta}\hat{R} > 0) > 0$ for all $(z,z') \in Z^2$, then for all states with $i \neq 1$:
+      \begin{equation}
+        \lim_{w \to \infty} \frac{c^*(w, z_{ij})}{w} = 0
+      \end{equation}
+  \end{theorem}
+
+  \vspace{0.5em}
+
+  \begin{alertblock}{Key Insight (from more general result)}
+    With fully mixing risk aversion Markov chain, zero asymptotic MPCs arise at all or almost all states.
+  \end{alertblock}
+\end{frame}
+
+%----- INTUITION FOR MAIN RESULT ------------------------------------
+\begin{frame}
+  \frametitle{Economic Intuition}
+
+  \begin{center}
+    \large Why does the possibility of lower risk aversion drive saving?
+  \end{center}
+
+  \vspace{1em}
+
+  \structure{The Mechanism}
+  \begin{enumerate}
+    \item Agent anticipates possible \alert{decrease} in risk aversion.
+    \item Lower future risk aversion $\Rightarrow$ Higher future consumption desire.
+    \item Creates \alert{perpetual precautionary saving motive}.
+    \item Saving motive persists regardless of wealth level.
+  \end{enumerate}
+
+  \vspace{0.5em}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Comparison with existing theory}
+  
+  \structure{Key difference from existing theory:}
+  
+  \begin{itemize}
+
+      \item Ma \& Toda (2021): Zero MPC is knife-edge case.
+      \item \alert{This result}: Zero MPC is generic feature.
+  \end{itemize}
+  \structure{Result holds even with:}
+    \begin{itemize}
+      \item Constant returns ($R_t \equiv R$).
+      \item No income risk.
+      \item Constant discount factor.
+  \end{itemize}
+\end{frame}
+
+%----- THEOREM 3.4: UPWARD TRANSITIONS ------------------------------
+\begin{frame}
+  \frametitle{Contrasting result: upward transitions}
+
+  \begin{theorem}[3.4: Strictly Increasing Risk Aversion]
+    If risk aversion strictly increases next period from state $i$ and $R$ is bounded below by $m > 0$:
+    \begin{equation}
+      \lim_{w \to \infty} \frac{c^*(w, z_{ij})}{w} = 1 \quad \text{for all } j
+    \end{equation}
+    (Consumption function is \alert{nonconcave}).
+  \end{theorem}
+
+  \vspace{0.5em}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Upward vs downward transitions}
+
+  \begin{alertblock}{Key Contrast}
+    \begin{itemize}
+      \item \structure{Theorem 3.2}: Downward transitions $\Rightarrow$ $\bar{c} = 0$ (save everything).
+      \item \structure{Theorem 3.4}: Upward transitions $\Rightarrow$ $\bar{c} = 1$ (consume everything).
+    \end{itemize}
+  \end{alertblock}
+
+  \structure{Intuition:} When agents expect to become \alert{more} risk averse in the future, they consume aggressively today before their preferences change.
+\end{frame}
+
+%----- THEOREM 3.3: POSITIVE ASYMPTOTIC MPC -------------------------
+\begin{frame}
+  \frametitle{When MPCs can be positive}
+
+  \vspace{0.5em}
+
+  \begin{proposition}[3.1: No Downward Transitions Required]
+    If $\bar{c}(z_{ij}) > 0$ for some $i,j$, then:
+    \begin{equation}
+      \bar{p}_{i1} = \cdots = \bar{p}_{i,i-1} = 0
+    \end{equation}
+    (Zero probability of moving to lower risk aversion).
+  \end{proposition}
+\end{frame}
+
+%----- SUMMARY OF MAIN THEOREMS -------------------------------------
+\begin{frame}
+  \frametitle{Summary of main theorems}
+
+
+  \structure{Main takeaway:}
+  \begin{itemize}
+    \item Zero MPCs are \alert{generic} when $\gamma$ can decrease.
+    \item Strictly positive MPCs require \alert{restrictive} conditions disallowing downward transitions.
+  \end{itemize}
+\end{frame}
+
+%----- COMPARISON WITH LITERATURE -----------------------------------
+\begin{frame}
+  \frametitle{Comparison with existing literature}
+  \vspace{0.8em}
+
+  \structure{Why this matters:}
+  \begin{itemize}
+    \item Single, intuitive mechanism, does not rely on growth rates.
+    \item Robust theoretical result.
+  \end{itemize}
+
+  \structure{Why I want to know more:}
+  \begin{itemize}
+    \item Do we need limiting MPCs to be zero? What specific empirical fact are we trying to explain?
+    \item Is this a story about risk or inter-temporal substitution?
+    \item Overall, we are now left with lots of results with ad hoc growth conditions. 
+    \item Does risk aversion dynamics pass the "Kath Day-Night Test"?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Kath Day-Night test}
+
+  \begin{center}
+    Question: Why is your MPC limiting to zero?
+    %
+    \includegraphics[width=0.55\textwidth]{kath-kel-quiz-2.png}
+  \end{center}
+
+\end{frame}
+%=====================================================================
+\section{Implications}
+
+
+
+\end{document}
