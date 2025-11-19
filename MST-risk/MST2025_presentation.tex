@@ -133,7 +133,7 @@
 
 
 \begin{frame}
-  \frametitle{Relevance of studying asymptotic MPCs}
+  \frametitle{Relevance of Studying Asymptotic MPCs}
 
   Overall, we seem to have a poor understanding of why the rich are thrifty. 
   %
@@ -206,7 +206,7 @@
 
 %----- PREFERENCE SPECIFICATION -------------------------------------
 \begin{frame}
-  \frametitle{State-dependent risk aversion}
+  \frametitle{State-Dependent Risk Aversion}
 
   \structure{Utility specification}
   \begin{equation*}
@@ -223,7 +223,7 @@
   \vspace{1em}
 
   \begin{itemize}
-    \item State decomposition: $Z_t = (\bar{Z}_t, \tilde{Z}_t)$
+    \item State decomposition: $Z_t = (\bar{Z}_t, \tilde{Z}_t)$.
     \item Risk aversion driven by $\bar{Z}_t \in \{\bar{z}_1, \ldots, \bar{z}_N\}$.
     \item Ordering: $0 < \gamma(\bar{z}_1) < \cdots < \gamma(\bar{z}_N)$.
     \item Transition matrix: $\bar{P} = (\bar{p}_{ij})_{1 \leq i,j \leq N}$.
@@ -282,15 +282,10 @@
   \frametitle{Existence and Uniqueness}
 
   \begin{theorem}[2.1: Existence and Uniqueness]
-
     If Assumptions 2.1 and 2.2 hold, then:
     \begin{enumerate}
       \item The time iteration operator $T:\mathcal{C}\to\mathcal{C}$ has a unique fixed point $c^*$.
-      \item For any $c \in \mathcal{C}$:
-      \begin{equation*}
-        \rho(T^k c, c^*) \to 0 \quad \text{as } k\to\infty
-      \end{equation*}
-      where $\rho$ is a metric based on marginal utilities.
+      \item For any $c \in \mathcal{C}$, $\rho(T^k c, c^*) \to 0$ as $k\to\infty$.
     \end{enumerate}
   \end{theorem}
 
@@ -299,7 +294,7 @@
   \structure{Approach:}
   \begin{itemize}
     \item Work in space $\mathcal{C}$ of continuous consumption functions
-    \item Use marginal utility metric: $\rho(c_1, c_2) = \sup_{(w,z)} |u'(c_1(w,z), z) - u'(c_2(w,z), z)|$
+    \item Use marginal utility metric: $\rho(c_1, c_2) := \sup_{(w,z)} |u'(c_1(w,z), z) - u'(c_2(w,z), z)|$
     \item Time iteration operator contracts in this metric
   \end{itemize}
 \end{frame}
@@ -309,9 +304,9 @@
   \frametitle{Zero Asymptotic MPCs}
 
   \begin{theorem}[3.2: Positive Transition Matrix]
-    If every entry of $\bar{P}$ is strictly positive and $\Pr_{z,z'}(\hat{\beta}\hat{R} > 0) > 0$ for all $(z,z') \in Z^2$, then for all states with $i \neq 1$:
+    If every entry of $\bar{P}$ is strictly positive and $\Pr_{z,z'}(\hat{\beta}\hat{R} > 0) > 0$ for all $(z,z') \in Z^2$, then
       \begin{equation}
-        \lim_{w \to \infty} \frac{c^*(w, z_{ij})}{w} = 0
+        \lim_{w \to \infty} \frac{c^*(w, z_{ij})}{w} = 0 \quad \text{for all states with } i \neq 1.
       \end{equation}
   \end{theorem}
 
@@ -344,7 +339,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Comparison with existing theory}
+  \frametitle{Comparison with Existing Theory}
   
   \structure{Key difference from existing theory:}
   
@@ -363,14 +358,14 @@
 
 %----- THEOREM 3.4: UPWARD TRANSITIONS ------------------------------
 \begin{frame}
-  \frametitle{Contrasting result: upward transitions}
+  \frametitle{Contrasting Result: Upward Transitions}
 
   \begin{theorem}[3.4: Strictly Increasing Risk Aversion]
-    If risk aversion strictly increases next period from state $i$ and $R$ is bounded below by $m > 0$:
+    If risk aversion strictly increases next period from state $i$ and $R$ is bounded below by $m > 0$, then
     \begin{equation}
       \lim_{w \to \infty} \frac{c^*(w, z_{ij})}{w} = 1 \quad \text{for all } j
     \end{equation}
-    (Consumption function is \alert{nonconcave}).
+    (consumption function is \alert{nonconcave}).
   \end{theorem}
 
   \vspace{0.5em}
@@ -378,7 +373,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Upward vs downward transitions}
+  \frametitle{Upward vs Downward Transitions}
 
   \begin{alertblock}{Key Contrast}
     \begin{itemize}
@@ -392,7 +387,7 @@
 
 %----- THEOREM 3.3: POSITIVE ASYMPTOTIC MPC -------------------------
 \begin{frame}
-  \frametitle{When MPCs can be positive}
+  \frametitle{When MPCs Can Be Positive}
 
   \vspace{0.5em}
 
@@ -407,7 +402,7 @@
 
 %----- SUMMARY OF MAIN THEOREMS -------------------------------------
 \begin{frame}
-  \frametitle{Summary of main theorems}
+  \frametitle{Summary of Main Theorems}
 
 
   \structure{Main takeaway:}
@@ -419,7 +414,7 @@
 
 %----- COMPARISON WITH LITERATURE -----------------------------------
 \begin{frame}
-  \frametitle{Comparison with existing literature}
+  \frametitle{Comparison with Existing Literature}
   \vspace{0.8em}
 
   \structure{Why this matters:}
@@ -438,7 +433,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Kath Day-Night test}
+  \frametitle{Kath Day-Night Test}
 
   \begin{center}
     Question: Why is your MPC limiting to zero?
